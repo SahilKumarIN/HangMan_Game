@@ -10,6 +10,9 @@ var textbox = document.getElementById("textbox");
 var image = document.getElementById('image');
 var keywords = document.getElementById("words_char");
 var hint = document.getElementById('hint');
+var restart = document.documentElement.querySelector('#restart');
+// var real_word = document.documentElement.querySelector('#realword');
+
 
 function randomWord() {
     var random = Math.floor(Math.random() * words.length);
@@ -52,6 +55,8 @@ function livesUpdate() {
             button.classList.add('disabled');
         });
         image.src="Assets/hangman_img/lost.png";
+        restart.classList.toggle("hidden");
+        hint.innerText = "Your Answer is : "+word ;
     }
 }
 
@@ -87,6 +92,12 @@ buttons.forEach(button => {
                 button.classList.add('disabled');
             });
             image.src="Assets/hangman_img/won.png";
+            restart.classList.toggle("hidden");
         }
     });
 });
+
+
+restart.addEventListener("click" , ()=>{
+    window.location.reload();
+})

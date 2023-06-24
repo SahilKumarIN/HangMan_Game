@@ -33,7 +33,7 @@
 }
 
 body{
-    font-family: baloo-bhai , 'Courier New', Courier, monospace;
+    font-family: baloo-bhai , 'Courier New', Courier, monospace !important;
 
 }
 
@@ -90,8 +90,8 @@ ul li a:hover{
 .game{
     width: 45vw;
     padding: 20px;
-    height: 70vh;
-    margin: 10px 0;
+    height: fit-content;
+    margin: 20px 0;
     border-right: 1px solid salmon;
 }
 
@@ -103,6 +103,16 @@ ul li a:hover{
     border: 1px solid ;
     border-radius: 10px;
     border-color: rgb(197, 197, 197);
+    font-family: baloo-bhai , 'Courier New', Courier, monospace;
+}
+
+.restart_btn{
+    padding: 4px 8px;
+    color: white;
+    background: #000000b7;
+    border: 1px solid hotpink;
+    border-radius: 4px;
+    font-family: baloo-bhai , 'Courier New', Courier, monospace;
 }
 
 .hangman{
@@ -186,4 +196,8 @@ footer{
 .disabled{
     background-color: rgb(234, 179, 179);
     cursor: not-allowed;
+}
+
+.hidden{
+    display: none;
 }
